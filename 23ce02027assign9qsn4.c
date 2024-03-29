@@ -16,18 +16,19 @@ int main() {
     struct person p;
     
     printf("Enter name: ");
-    scanf("%s", p.name);
+    fgets(p.name,sizeof(p.name),stdin);
     printf("Enter street: ");
     fgets(p.a.street,sizeof(p.a.street),stdin);
+
     printf("Enter city: ");
     scanf("%s", p.a.city);
     printf("Enter zip code: ");
     scanf("%s", p.a.zipCode);
 
     printf("\nDetails of the Person:\n");
-    printf("Name: %s\n", p.name);
+    printf("Name: %s", p.name);
     printf("Address:\n");
-    printf("  Street: %s\n", p.a.street);
+    printf("  Street: %s", p.a.street);
     printf("  City: %s\n", p.a.city);
     printf("  Zip Code: %s\n", p.a.zipCode);
 
